@@ -1,7 +1,7 @@
 """The morphops module is the primary module of the Morphops library.
 
 It contains implementations of common geometric morphometrics operations.
-Some examples are - 
+Some examples are:
 
 * IO operations to read/write landmark data
 

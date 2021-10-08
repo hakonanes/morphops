@@ -1,4 +1,6 @@
+from itertools import chain
 from setuptools import setup, find_packages
+
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -9,7 +11,11 @@ with open("morphops/_version.py") as version_file:
 
 extra_feature_requirements = {
     "tests": ["coverage >= 5.0", "pytest >= 5.4", "pytest-cov >= 2.8.1"],
+    "docs": ["sphinx < 2", "sphinx-rtd-theme"],
 }
+extra_feature_requirements["dev"] = list(
+    chain(*list(extra_feature_requirements.values()))
+)
 
 setup(
     name='morphops',
