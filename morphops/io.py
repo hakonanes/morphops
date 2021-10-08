@@ -15,7 +15,7 @@ class MopsFileWriteError(Exception):
 
 
 def read_dta(filename):
-    r"""Reads *.dta files, as written by the IDAV Landmark Editor.
+    r"""Reads \*.dta files, as written by the IDAV Landmark Editor.
 
     dta files typically have the following structure.
 
@@ -28,7 +28,7 @@ def read_dta(filename):
        3. p is the number of landmarks per landmark set
        4. k is the number of coordinates of each landmark (usually 2 or 3)
 
-       The "1 9999" are ignored (but expected to exist) when reading. This is 
+       The "1 9999" are ignored (but expected to exist) when reading. This is
        because those two numbers are a misapplication of the NTS format, which 
        the DTA format is based on. Per the NTS format, the interpretation of 
        the "1 9999" is that the file has missing data indicated by 9999.
@@ -92,11 +92,11 @@ def read_dta(filename):
 
 
 def write_dta(filename, lmk_sets, names=[]):
-    r"""Writes *.dta files, as written by the IDAV Landmark Editor.
+    r"""Writes \*.dta files, as written by the IDAV Landmark Editor.
 
     See also
     --------
-    read_dta: For an explanation of the *.dta format.
+    read_dta: For an explanation of the \*.dta format.
     
     Todo
     ----
